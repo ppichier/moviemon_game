@@ -1,0 +1,59 @@
+{% extends "base.html" %} {% block content %}
+<div class="page-container">
+  <div class="app-container">
+    <h1>Load Option</h1>
+    <div>
+      <p>A - Load</p>
+      <p>B - Cancel</p>
+    </div>
+    <div id="option--slots">
+      <div>
+        <p>
+          Slot A
+        </p>
+        <p>
+          {{ slot_a_status }}
+        </p>
+        {% if slot_load_position == 0 %}
+        <div style="font-weight: blod; color: blue; font-size: 30px">
+          +
+        </div>
+        {% endif %}
+      </div>
+      <div>
+        <p>
+          Slot B
+        </p>
+        <p>
+          {{ slot_b_status }}
+        </p>
+        {% if slot_load_position == 1 %}
+        <div style="font-weight: blod; color: blue; font-size: 30px">
+          +
+        </div>
+        {% endif %}
+      </div>
+      <div>
+        <p>
+          Slot C
+        </p>
+        <p>
+          {{ slot_c_status }}
+        </p>
+        {% if slot_load_position == 2 %}
+        <div style="font-weight: blod; color: blue; font-size: 30px">
+          +
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+    <div style="margin-top: 50px; font-size: 30px">
+      {{ msg_load_ok}}
+    </div>
+  </div>
+  <div class="buttons--page--container">
+    {% include "buttons.html" %}
+  </div>
+</div>
+{% endblock %}

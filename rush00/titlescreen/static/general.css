@@ -1,0 +1,241 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Impact, fantasy;
+}
+
+/* Base template  */
+
+.base--full-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.base--console-frame {
+  width: 700px;
+  height: 900px;
+  border: 10px solid #df4125;
+  border-radius: 20px;
+}
+
+.page-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.app-container {
+  width: 100%;
+  height: 80%;
+}
+
+/* Buttons */
+
+.buttons--page--container {
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+}
+
+.buttons--container > a > button {
+  font-size: 30px;
+  border-radius: 3px;
+  font-weight: bold;
+  box-shadow: inset 0 0 10px #000000;
+  cursor: pointer;
+}
+
+.buttons--active {
+  color: #fff;
+  border: none;
+  background-color: #2bffa5;
+  animation: Gradient 15s ease infinite;
+}
+
+#button-logo-end {
+  color: #000;
+  position: absolute;
+  font-style: italic;
+  right: 2%;
+  bottom: 0;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.buttons--container {
+  width: 100%;
+  border-top: 5px solid #df4125;
+  background-color: #df4125;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons--directions {
+  display: flex;
+  align-items: center;
+}
+.buttons--direction-single > a > button {
+  /* font-size: 20px; */
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  font-weight: bold;
+  box-shadow: inset 0 0 10px #000000;
+  cursor: pointer;
+}
+
+.buttons--direction-round {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px #000000;
+  background-color: #2bffa5;
+}
+
+/* Titlescreen */
+
+#titlescreen-container {
+  height: 80%;
+  width: 100%;
+}
+
+#titlescreen--start-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#titlescreen--logo > img {
+  margin-top: 40px;
+  width: 30%;
+  height: 30%;
+}
+
+/* Worldmap */
+
+.worldmap-container {
+  background-image: url("map.jpg");
+  position: relative;
+}
+
+#worldmap-movieball {
+  position: absolute;
+  top: 0;
+  left: -150px;
+  font-size: 30px;
+  display: flex;
+}
+
+#worldmap-message {
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  font-size: 30px;
+  display: flex;
+}
+
+#worldmap-movieball > img {
+  width: 50px;
+  height: 50px;
+}
+
+#worldmap-movieball > div {
+  align-self: center;
+  margin-left: 10px;
+}
+
+.worldmap-row {
+  display: flex;
+  width: 100%;
+  height: 10%;
+}
+
+.worldmap-cube {
+  width: 10%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.hunter-img > img {
+  width: 100%;
+}
+
+/* Option */
+
+#option--pause {
+  display: flex;
+  justify-content: center;
+}
+
+#option--pause > div {
+  width: 20px;
+  height: 60px;
+  margin: 20px 10px 0 10px;
+  background-color: #df4125;
+}
+
+#option--slots {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20%;
+}
+
+#option--slots > div {
+  border: 4px solid #fff;
+  border-top: none;
+  font-size: 25px;
+  padding: 40px 0px;
+  width: 20%;
+}
+
+/* Moviedex */
+
+.moviedex--list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  height: 80%;
+}
+
+.moviedex--element {
+  width: 200px;
+  height: 250px;
+  border: 2px solid #df4125;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.moviedex--details {
+  /* width: 50px; */
+  /* height: 250px; */
+  height: 100%;
+  overflow-y: auto;
+  font-size: 20px;
+  border: 2px solid #df4125;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}

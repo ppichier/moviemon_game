@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block content %}
+<div class="page-container">
+
+
+
+  <div class="app-container worldmap-container">
+
+    <div id="worldmap-message">
+      {{ message_movieball_found }}
+      <span style="color: red">
+        {{ message_moviemon_found }}
+
+      </span>
+    </div>
+
+    <div id="worldmap-movieball">
+      {% load static %}
+      <img src="{% static 'pokeball.png' %}" alt="pokeball" />
+      <div>
+        {{ movieballs_nbr }}
+      </div>
+    </div>
+
+    {% for y in grid_map %}
+    <div class="worldmap-row">
+
+      {% for x in grid_map %}
+
+      {% if player_position.x == x and player_position.y == y %}
+      <div class="worldmap-cube hunter-img">
+        {% load static %}
+        <img src="{% static 'hunter.png' %}" alt="logo hunter" />
+      </div>
+      {% else %}
+
+      <div class="worldmap-cube"></div>
+
+      {% endif %}
+
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+
+  </div>
+
+  <div class=" buttons--page--container">
+    {% include "buttons.html" %}
+  </div>
+
+
+</div>
+{% endblock %}

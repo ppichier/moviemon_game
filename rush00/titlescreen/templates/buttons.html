@@ -1,0 +1,74 @@
+<div class="buttons--container">
+  {%url button_a as a %} {% if a %}
+  <a href="{{a}}" id="button-a"><button class="buttons--active">A</button></a>
+  {% elif button_a == "battle" %}
+  <a href="{% url button_a moviemon_id %}"
+    ><button class="buttons--active">A</button></a
+  >
+
+  {% else %}
+  <a href="" id="button-a"><button disabled>A</button></a>
+  {% endif %} {%url button_b as b %} {% if b %}
+  <a href="{{b}}" id="button-b"><button class="buttons--active">B</button></a>
+  {% else %}
+  <a href="" id="button-b"><button disabled>B</button></a>
+  {% endif %} {%url button_start as start %} {% if start %}
+  <a href="{{start}}" id="button-start"
+    ><button class="buttons--active">Start</button></a
+  >
+  {% else %}
+  <a href="" id="button-start"><button disabled>Start</button></a>
+  {% endif %} {%url button_select as select %} {% if select %}
+  <a href="{{select}}" id="button-select"
+    ><button class="buttons--active">Select</button></a
+  >
+  {% else %}
+  <a href="" id="button-select"><button disabled>Select</button></a>
+  {% endif %}
+
+  <div class="buttons--directions">
+    <div class="buttons--direction-single">
+      {%url button_left as left %} {% if left %}
+      <a href="{{left}}" id="button-left"
+        ><button class="buttons--active">left</button></a
+      >
+      {% else %}
+      <a href="" id="button-left"><button disabled>left</button></a>
+      {% endif %}
+    </div>
+
+    <div>
+      <div class="buttons--direction-single">
+        {%url button_up as up %} {% if up %}
+        <a href="{{up}}" id="button-up"
+          ><button class="buttons--active">up</button></a
+        >
+        {% else %}
+        <a href="" id="button-up"><button disabled>up</button></a>
+        {% endif %}
+      </div>
+      <div class="buttons--direction-round"></div>
+      <div class="buttons--direction-single">
+        {%url button_down as down %} {% if down %}
+        <a href="{{down}}" id="button-down"
+          ><button class="buttons--active">down</button></a
+        >
+        {% else %}
+        <a href="" id="button-down"><button disabled>down</button></a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="buttons--direction-single">
+      {%url button_right as right %} {% if right %}
+      <a href="{{right}}" id="button-right"
+        ><button class="buttons--active">right</button></a
+      >
+      {% else %}
+      <a href="" id="button-right"><button disabled>right</button></a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div id="button-logo-end">Moviemon</div>
+</div>

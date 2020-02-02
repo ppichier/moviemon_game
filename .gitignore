@@ -1,0 +1,6 @@
+**/__pycache__
+**/*.pyc
+!/**/migrations/__init__.py
+**/*.sqlite3
+**/.DS_Store
+**/.vscode

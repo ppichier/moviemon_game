@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-container">
+  <div id="titlescreen-container">
+    <h1>MOVIEMON</h1>
+    <div id="titlescreen--start-menu">
+      <p>A - NEW GAME</p>
+      <p>B - LOAD</p>
+    </div>
+    <div id="titlescreen--logo">
+      {% load static %}
+      <img src="{% static 'logo.png' %}" alt="logo moviemon">
+    </div>
+  </div>
+  <div class="buttons--page--container">
+    {% include "buttons.html" %}
+  </div>
+</div>
+{% endblock %}
